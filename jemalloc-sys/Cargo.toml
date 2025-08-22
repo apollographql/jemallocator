@@ -1,6 +1,6 @@
 [package]
 name = "tikv-jemalloc-sys"
-version = "0.6.0+5.3.0-1-ge13ca993e8ccb9ba9847cc330696e02839f328f7"
+version = "0.6.0+5.3.0-1-g9186700eb325043879fd6ea2a6adf2ccbfdd57b1"
 authors = [
     "Alex Crichton <alex@alexcrichton.com>",
     "Gonzalo Brito Gadeschi <gonzalobg88@gmail.com>",
@@ -18,7 +18,7 @@ description = """
 Rust FFI bindings to jemalloc
 """
 edition = "2018"
-rust-version = "1.71.0"
+rust-version = "1.89.0"
 
 [badges]
 codecov = { repository = "tikv/jemallocator" }
@@ -33,10 +33,10 @@ unexpected_cfgs = { level = "allow", check-cfg = [
 ] }
 
 [dependencies]
-libc = { version = "^0.2.8", default-features = false }
+libc = { version = "^0.2.175", default-features = false }
 
 [build-dependencies]
-cc = "^1.0.13"
+cc = "^1.2.34"
 
 [features]
 default = ["background_threads_runtime_support"]
